@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 import TheTypeSelector from './components/TheTypeSelector'
 import TheMainContainer from './components/TheMainContainer'
 
@@ -14,6 +16,32 @@ export default {
   components: {
     TheTypeSelector,
     TheMainContainer
+  },
+  computed: mapGetters([
+    'requestTypeSelected'
+  ]),
+  watch: {
+    requestTypeSelected (newType) {
+      // this.$el.style.setProperty('--active-color', 'var(--main-blue)')
+      switch (newType) {
+        case 'trivia':
+          this.$el.style.setProperty('--active-color', 'var(--main-dark-red)')
+          this.$el.style.setProperty('--active-light-color', 'var(--main-red)')
+          break
+        case 'year':
+          this.$el.style.setProperty('--active-color', 'var(--main-dark-blue)')
+          this.$el.style.setProperty('--active-light-color', 'var(--main-blue)')
+          break
+        case 'date':
+          this.$el.style.setProperty('--active-color', 'var(--main-dark-green)')
+          this.$el.style.setProperty('--active-light-color', 'var(--main-green)')
+          break
+        case 'math':
+          this.$el.style.setProperty('--active-color', 'var(--main-dark-yellow)')
+          this.$el.style.setProperty('--active-light-color', 'var(--main-yellow)')
+          break
+      }
+    }
   }
 }
 </script>
@@ -30,9 +58,5 @@ export default {
   --main-dark-yellow: rgb(102, 88, 0);
   --active-color: var(--main-dark-red);
   --active-light-color: var(--main-red);
-}
-
-body {
-  color: var(--active-color);
 }
 </style>

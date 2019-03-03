@@ -2,25 +2,29 @@
   <div class="the-type-selector">
     <div class="container">
       <button
-        class="trivia-button active"
+        class="trivia-button"
+        :class="{ active: typeSelected === 'trivia' }"
         @click="typeSelected = 'trivia'"
       >
         Trivia
       </button>
       <button
         class="year-button"
+        :class="{ active: typeSelected === 'year' }"
         @click="typeSelected = 'year'"
       >
         Year
       </button>
       <button
         class="date-button"
+        :class="{ active: typeSelected === 'date' }"
         @click="typeSelected = 'date'"
       >
         Date
       </button>
       <button
         class="math-button"
+        :class="{ active: typeSelected === 'math' }"
         @click="typeSelected = 'math'"
       >
         Math

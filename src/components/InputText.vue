@@ -69,5 +69,6 @@ export default {
   width: 100%;
   border: 2px solid var(--active-color);
   border-radius: 3px;
+  color: var(--active-color)
 }
 </style>

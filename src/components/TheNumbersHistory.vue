@@ -1,6 +1,6 @@
 <template>
   <div class="the-numbers-history row">
-    <table class="col-10 table">
+    <table class="col-10 table table-borderless">
       <thead>
         <tr>
           <th scope="col">
@@ -66,7 +66,8 @@ export default {
 
 table {
   margin: 0 auto;
-  color: inherit;
+  color: var(--active-color);
+  border-color: var(--active-color);
 }
 
 th {
@@ -75,5 +76,13 @@ th {
 
 th:last-of-type {
   width: 40%;
+}
+
+tr {
+  transition: background .5s;
+}
+
+tr:hover {
+  background: var(--active-light-color);
 }
 </style>

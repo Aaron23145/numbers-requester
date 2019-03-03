@@ -25,5 +25,6 @@ export default {
 <style lang="scss" scoped>
 .the-numbers-displayer {
   padding: 20px 0;
+  color: var(--active-color);
 }
 </style>
