@@ -1,5 +1,5 @@
 <template>
-  <div class="root container">
+  <div class="main-container container">
     <TheNumbersDisplayer />
     <TheNumbersRequester />
     <TheNumbersHistory />
@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import TheNumbersDisplayer from './TheNumbersDisplayer'
 import TheNumbersRequester from './TheNumbersRequester'
 import TheNumbersHistory from './TheNumbersHistory'
@@ -22,7 +24,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.root {
-  background: yellow;
+.main-container {
+  box-shadow: 0px 10px 19px -7px black;
 }
 </style>

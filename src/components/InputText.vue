@@ -2,7 +2,7 @@
   <input
     v-model.trim="input"
     type="text"
-    class="root"
+    class="input-text"
     @keyup.enter="enterPressed"
   >
 </template>
@@ -64,8 +64,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.root {
+.input-text {
   display: block;
   width: 100%;
+  border: 2px solid var(--active-color);
+  border-radius: 3px;
 }
 </style>

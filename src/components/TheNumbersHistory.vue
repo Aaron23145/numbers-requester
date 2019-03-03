@@ -1,20 +1,20 @@
 <template>
-  <div>
-    <table>
+  <div class="the-numbers-history row">
+    <table class="col-10 table">
       <thead>
         <tr>
-          <td scope="col">
+          <th scope="col">
             #
-          </td>
-          <td scope="col">
+          </th>
+          <th scope="col">
             Value
-          </td>
-          <td scope="col">
+          </th>
+          <th scope="col">
             Type
-          </td>
-          <td scope="col">
+          </th>
+          <th scope="col">
             Date
-          </td>
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -41,6 +41,8 @@
 </template>
 
 <script>
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import moment from 'moment'
 import { mapGetters } from 'vuex'
 
@@ -58,4 +60,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.the-numbers-history {
+  padding-bottom: 20px;
+}
+
+table {
+  margin: 0 auto;
+  color: inherit;
+}
+
+th {
+  width: 20%;
+}
+
+th:last-of-type {
+  width: 40%;
+}
 </style>

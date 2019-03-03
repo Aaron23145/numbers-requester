@@ -1,6 +1,6 @@
 <template>
   <button
-    class="root"
+    class="input-random"
     v-on="buttonListeners"
   >
     <slot>Random</slot>
@@ -21,8 +21,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.root {
+.input-random {
   display: block;
   width: 100%;
+  color: var(--active-color);
+  border: 2px solid var(--active-color);
+  border-radius: 3px;
+  background: transparent;
+  transition: background .5s;
+}
+
+.input-random:hover {
+  background: var(--active-light-color);
 }
 </style>

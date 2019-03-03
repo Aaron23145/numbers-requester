@@ -1,5 +1,5 @@
 <template>
-  <div class="root">
+  <div class="the-numbers-displayer">
     <p v-if="requestPerformed">
       {{ lastRecordMsg }}
     </p>
@@ -23,4 +23,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.the-numbers-displayer {
+  padding: 20px 0;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="root row">
+  <div class="input-date row">
     <select
       v-model="monthSelected"
       class="col-3"
@@ -48,6 +48,8 @@
 </template>
 
 <script>
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import DefaultEmptyOption from './DefaultEmptyOption'
 
 const monthDays = Object.freeze({
@@ -89,12 +91,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.root {
+.input-date {
   justify-content: space-between;
+  height: 100%;
 }
 
 select, button {
   display: block;
-  width: 100%;
+  height: 100%;
+}
+
+select {
+  color: var(--active-color);
+  border: 2px solid var(--active-color);
+  border-radius: 3px;
+  background: transparent;
+}
+
+button {
+  color: var(--active-color);
+  border: 2px solid var(--active-color);
+  border-radius: 3px;
+  background: transparent;
+  transition: background .5s;
+}
+
+button:hover {
+  background: var(--active-light-color);
 }
 </style>

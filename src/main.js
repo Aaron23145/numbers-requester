@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
 import store from './store'
-import 'bootstrap/dist/css/bootstrap-grid.min.css'
-import 'bootstrap/dist/css/bootstrap-reboot.min.css'
 
 Vue.config.productionTip = false
 

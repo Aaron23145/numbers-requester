@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div class="root col-9 row">
+    <div class="the-numbers-requester col-9 row">
       <div class="col-9">
         <InputText
           v-if="requestTypeSelected !== 'date'"
@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import { mapState, mapMutations } from 'vuex'
 
 import Request from '../request.js'
@@ -65,7 +67,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.root {
-  margin: 0 auto;
+.the-numbers-requester {
+  margin: 10px auto;
 }
 </style>
