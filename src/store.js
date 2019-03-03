@@ -8,8 +8,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     requestTypeSelected: 'trivia',
-    history: new History(),
-    recordSelectedIndex: null
+    requestPerformed: false,
+    history: new History()
   },
   mutations: {
     changeRequestTypeSelected (state, newType) {
@@ -25,18 +25,17 @@ export default new Vuex.Store({
     },
     clearRecords (state) {
       state.history.clear()
+    },
+    requestPerformed (state) {
+      state.requestPerformed = true
     }
   },
   getters: {
     requestTypeSelected: (state) => state.requestTypeSelected,
     record: (state) => (index) => state.history.history[index],
     recordMsg: (state, getters) => (index) => getters.record(index).data.msg,
-    recordSelected (state, getters) {
-      const record = getters.record(state.recordSelectedIndex)
-    },
-    recordSelectedMsg (state, getters) {
-
-    },
+    lastRecord: (state, getters) => getters.record(0),
+    lastRecordMsg: (state, getters) => getters.lastRecord.data.msg,
     allRecords: (state) => state.history.history,
     allRecordsDescription (state, getters) {
       const records = getters.allRecords

@@ -3,12 +3,20 @@
     value
     disabled
     selected
-  />
+  >
+    {{ emptyOptionText }}
+  </option>
 </template>
 
 <script>
 export default {
-  name: 'DefaultEmptyOption'
+  name: 'DefaultEmptyOption',
+  props: {
+    emptyOptionText: {
+      type: String,
+      default: null
+    }
+  }
 }
 </script>
 

@@ -1,22 +1,19 @@
 <template>
   <div>
-    <TheNumbersDisplayer />
-    <TheNumbersRequester />
-    <TheNumbersHistory />
+    <TheTypeSelector />
+    <TheMainContainer />
   </div>
 </template>
 
 <script>
-import TheNumbersRequester from './components/TheNumbersRequester'
-import TheNumbersDisplayer from './components/TheNumbersDisplayer'
-import TheNumbersHistory from './components/TheNumbersHistory'
+import TheTypeSelector from './components/TheTypeSelector'
+import TheMainContainer from './components/TheMainContainer'
 
 export default {
   name: 'App',
   components: {
-    TheNumbersRequester,
-    TheNumbersDisplayer,
-    TheNumbersHistory
+    TheTypeSelector,
+    TheMainContainer
   }
 }
 </script>

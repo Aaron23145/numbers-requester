@@ -1,18 +1,20 @@
 <template>
-  <label>
-    <slot>Type:</slot>
-    <select v-model="typeSelected">
-      <option
-        value
-        disabled
-        selected
-      />
-      <option value="trivia">Trivia</option>
-      <option value="year">Year</option>
-      <option value="date">Date</option>
-      <option value="math">Math</option>
-    </select>
-  </label>
+  <div class="root">
+    <div class="container">
+      <button @click="typeSelected = 'trivia'">
+        Trivia
+      </button>
+      <button @click="typeSelected = 'year'">
+        Year
+      </button>
+      <button @click="typeSelected = 'date'">
+        Date
+      </button>
+      <button @click="typeSelected = 'math'">
+        Math
+      </button>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -32,4 +34,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.root {
+  background: red;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  background: blue;
+  border: none;
+  padding: 10px 5%;
+}
 </style>

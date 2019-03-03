@@ -1,12 +1,10 @@
 <template>
-  <label>
-    <slot>Text Input:</slot>
-    <input
-      v-model.trim="input"
-      type="text"
-      @keyup.enter="enterPressed"
-    >
-  </label>
+  <input
+    v-model.trim="input"
+    type="text"
+    class="root"
+    @keyup.enter="enterPressed"
+  >
 </template>
 
 <script>
@@ -66,4 +64,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.root {
+  display: block;
+  width: 100%;
+}
 </style>
