@@ -107,6 +107,7 @@ select {
   border-radius: 3px;
   background: transparent;
   outline: none;
+  -moz-appearance: none;
 }
 
 button {
