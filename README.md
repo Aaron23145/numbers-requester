@@ -1,39 +1,41 @@
-# numbers-requester-final
+# Numbers Requester
 
-## Project setup
+An app that consumes http://numbersapi.com/. Just created for testing and learning vue purposes. It does not work on http servers (explained why below).
+
+## Why the Numbers Requester does not work on https servers?
+
+This app does not work on https because it uses an http api to fetch the data (http://numbersapi.com). If you use an https server the ajax requests that performs this project will be blocked by the browser because of downgrade. Therefore, this app can not be uploaded in Github Pages.
+
+
+## Live
+
+You can see the app working in a live static http server there: http://numbers-requester.getforge.io/
+
+## Compile source
+
+Just clone the repository and run the following commands in its root folder.
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
 npm run build
 ```
+Then, build an http local server on /dist/ directory. If your server uses https it will not work.
 
-### Run your tests
-```
-npm run test
-```
+## Production Dependencies
 
-### Lints and fixes files
-```
-npm run lint
-```
+All dependencies are managed through Node Package Manager.
 
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
+| Name | Version | Use |
+| ----------- | ----------- | ----------- |
+| Axios | 0.18.0 | Ajax requests |
+| Bootstrap | 4.3.1 | Css reboot, grid system and table styling |
+| Lodash.debounce | 4.0.8 | Make requests after some miliseconds automatically when you are entering text input |
+| Moment | 2.24.0 | Date history displaying |
+| Vue | 2.6.6 | DOM manipulation |
+| Vuex | 3.0.1 | Store general states like the request type that is currently selected |
 
-### Run your unit tests
-```
-npm run test:unit
-```
+## TO DO
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Write unit tests
+- Write integration tests
+- Write end-to-end tests
+- Error handling (input and network errors)
