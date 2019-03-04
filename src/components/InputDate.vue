@@ -106,6 +106,7 @@ select {
   border: 2px solid var(--active-color);
   border-radius: 3px;
   background: transparent;
+  outline: none;
 }
 
 button {
@@ -114,6 +115,7 @@ button {
   border-radius: 3px;
   background: transparent;
   transition: background .5s;
+  outline: none;
 }
 
 button:hover {

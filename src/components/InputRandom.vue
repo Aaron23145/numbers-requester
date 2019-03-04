@@ -29,6 +29,7 @@ export default {
   border-radius: 3px;
   background: transparent;
   transition: background .5s;
+  outline: none;
 }
 
 .input-random:hover {

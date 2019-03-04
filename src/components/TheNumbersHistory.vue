@@ -111,6 +111,7 @@ button {
   display: block;
   width: 50%;
   margin: 0 auto 10px;
+  outline: none;
 }
 
 button:hover {

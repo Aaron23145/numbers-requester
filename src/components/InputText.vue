@@ -71,5 +71,6 @@ export default {
   border-radius: 3px;
   color: var(--active-color);
   text-align: center;
+  outline: none;
 }
 </style>

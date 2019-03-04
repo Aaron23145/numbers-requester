@@ -67,6 +67,7 @@ button {
   border-radius: 3px;
   padding: 10px 5%;
   transition: background .5s;
+  outline: none;
 }
 
 .trivia-button {

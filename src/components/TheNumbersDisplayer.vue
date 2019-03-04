@@ -1,8 +1,16 @@
 <template>
   <div class="the-numbers-displayer">
-    <p v-if="recordSelected !== false">
-      {{ recordSelectedMsg }}
-    </p>
+    <transition
+      name="record-message"
+      mode="out-in"
+    >
+      <p
+        v-if="recordSelected !== false"
+        :key="Math.random()"
+      >
+        {{ recordSelectedMsg }}
+      </p>
+    </transition>
   </div>
 </template>
 
@@ -26,5 +34,17 @@ export default {
 .the-numbers-displayer {
   padding: 20px 0;
   color: var(--active-color);
+  text-align: center;
+}
+
+.record-message-enter-active,
+.record-message-leave-active {
+  transition: transform .5s, opacity .5s;
+}
+
+.record-message-enter,
+.record-message-leave-to {
+  opacity: 0;
+  transform: translateY(-50%);
 }
 </style>
