@@ -1,7 +1,7 @@
 <template>
   <div class="the-numbers-displayer">
-    <p v-if="requestPerformed">
-      {{ lastRecordMsg }}
+    <p v-if="recordSelected !== false">
+      {{ recordSelectedMsg }}
     </p>
   </div>
 </template>
@@ -13,10 +13,10 @@ export default {
   name: 'TheNumbersDisplayer',
   computed: {
     ...mapState([
-      'requestPerformed'
+      'recordSelected'
     ]),
     ...mapGetters([
-      'lastRecordMsg'
+      'recordSelectedMsg'
     ])
   }
 }

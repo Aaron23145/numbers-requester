@@ -52,7 +52,7 @@ export default {
         console.log(`Request result:`)
         console.log(data)
 
-        this.requestPerformed()
+        this.selectRecord(0)
         this.addRecord(new Record(data))
       }).catch(function (error) {
         console.error(`Handle request error: ${error.toString()}`)
@@ -60,7 +60,7 @@ export default {
     },
     ...mapMutations([
       'addRecord',
-      'requestPerformed'
+      'selectRecord'
     ])
   }
 }
