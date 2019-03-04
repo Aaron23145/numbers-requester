@@ -9,7 +9,8 @@ export default new Vuex.Store({
   state: {
     requestTypeSelected: 'trivia',
     recordSelected: false,
-    history: new History()
+    history: new History(),
+    requestError: false
   },
   mutations: {
     changeRequestTypeSelected (state, newType) {
@@ -28,6 +29,15 @@ export default new Vuex.Store({
     },
     selectRecord (state, index) {
       state.recordSelected = index
+    },
+    unselectRecord (state) {
+      state.recordSelected = false
+    },
+    errorOcurred (state, error) {
+      state.requestError = error
+    },
+    errorFixed (state) {
+      state.requestError = false
     }
   },
   getters: {

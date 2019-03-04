@@ -52,15 +52,20 @@ export default {
         console.log(`Request result:`)
         console.log(data)
 
+        this.errorFixed()
         this.selectRecord(0)
         this.addRecord(new Record(data))
-      }).catch(function (error) {
-        console.error(`Handle request error: ${error.toString()}`)
+      }).catch(error => {
+        this.unselectRecord()
+        this.errorOcurred(error)
       })
     },
     ...mapMutations([
       'addRecord',
-      'selectRecord'
+      'selectRecord',
+      'unselectRecord',
+      'errorOcurred',
+      'errorFixed'
     ])
   }
 }

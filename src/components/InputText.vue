@@ -9,7 +9,7 @@
 
 <script>
 import debounce from 'lodash.debounce'
-import { mapGetters } from 'vuex'
+import { mapGetters, mapMutations } from 'vuex'
 
 export default {
   name: 'InputText',
@@ -53,12 +53,19 @@ export default {
       return false
     },
     showError (error) {
-      console.error(error)
+      if (error === 'Empty string') return
+
+      this.unselectRecord()
+      this.errorOcurred(error)
     },
     enterPressed () {
       this.inputModified.cancel()
       this.textInputModified()
-    }
+    },
+    ...mapMutations([
+      'errorOcurred',
+      'unselectRecord'
+    ])
   }
 }
 </script>

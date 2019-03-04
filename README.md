@@ -38,4 +38,3 @@ All dependencies are managed through Node Package Manager.
 - Write unit tests
 - Write integration tests
 - Write end-to-end tests
-- Error handling (input and network errors)

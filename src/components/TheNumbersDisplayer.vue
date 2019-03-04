@@ -10,6 +10,12 @@
       >
         {{ recordSelectedMsg }}
       </p>
+      <p
+        v-else-if="requestError"
+        class="error"
+      >
+        {{ requestError }}
+      </p>
     </transition>
   </div>
 </template>
@@ -21,7 +27,8 @@ export default {
   name: 'TheNumbersDisplayer',
   computed: {
     ...mapState([
-      'recordSelected'
+      'recordSelected',
+      'requestError'
     ]),
     ...mapGetters([
       'recordSelectedMsg'
@@ -46,5 +53,9 @@ export default {
 .record-message-leave-to {
   opacity: 0;
   transform: translateY(-50%);
+}
+
+.error {
+  color: red;
 }
 </style>
