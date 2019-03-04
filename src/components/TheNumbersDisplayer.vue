@@ -12,6 +12,7 @@
       </p>
       <p
         v-else-if="requestError"
+        :key="Math.random()"
         class="error"
       >
         {{ requestError }}
