@@ -1,6 +1,9 @@
 <template>
   <div class="the-numbers-history">
-    <button @click="clearRecords">
+    <button
+      class="col-8"
+      @click="clearRecords"
+    >
       Clear history
     </button>
     <div class="row">
@@ -16,7 +19,10 @@
             <th scope="col">
               Type
             </th>
-            <th scope="col">
+            <th
+              scope="col"
+              class="d-none d-sm-table-cell"
+            >
               Date
             </th>
           </tr>
@@ -37,8 +43,11 @@
             <td>
               {{ record.data.type }}
             </td>
-            <td>
-              {{ formatDate(record.date) }}
+            <td class="d-none d-sm-table-cell">
+              {{ formatDate(record.date)[0] }}
+              <span class="d-none d-md-inline">
+                {{ formatDate(record.date)[1] }}
+              </span>
             </td>
           </tr>
         </tbody>
@@ -65,7 +74,7 @@ export default {
   },
   methods: {
     formatDate (date) {
-      return moment(date).format('hh:mm:ss a MMM Do YYYY')
+      return [moment(date).format('hh:mm:ss a MMM Do'), moment(date).format('YYYY')]
     },
     ...mapMutations([
       'clearRecords',
@@ -109,7 +118,6 @@ button {
   border: 2px solid var(--active-color);
   border-radius: 3px;
   display: block;
-  width: 50%;
   margin: 0 auto 10px;
   outline: none;
 }

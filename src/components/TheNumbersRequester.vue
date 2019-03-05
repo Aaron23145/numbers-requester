@@ -1,7 +1,7 @@
 <template>
   <div class="row">
-    <div class="the-numbers-requester col-9 row">
-      <div class="col-9">
+    <div class="the-numbers-requester col-12 col-md-9 row">
+      <div class="col-12 col-md-9">
         <InputText
           v-if="requestTypeSelected !== 'date'"
           @ok="request"
@@ -11,7 +11,7 @@
           @ok="request"
         />
       </div>
-      <div class="col-3">
+      <div class="col-12 mt-2 mt-md-0 col-md-3">
         <InputRandom @click="request('random')" />
       </div>
     </div>

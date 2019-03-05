@@ -1,29 +1,29 @@
 <template>
-  <div class="the-type-selector">
-    <div class="container">
+  <div class="mt-0 mt-sm-3">
+    <div class="container d-flex justify-content-around p-0 p-sm-1">
       <button
-        class="trivia-button"
+        class="trivia-button flex-grow-1 flex-sm-grow-0"
         :class="{ active: typeSelected === 'trivia' }"
         @click="typeSelected = 'trivia'"
       >
         Trivia
       </button>
       <button
-        class="year-button"
+        class="year-button flex-grow-1 flex-sm-grow-0"
         :class="{ active: typeSelected === 'year' }"
         @click="typeSelected = 'year'"
       >
         Year
       </button>
       <button
-        class="date-button"
+        class="date-button flex-grow-1 flex-sm-grow-0"
         :class="{ active: typeSelected === 'date' }"
         @click="typeSelected = 'date'"
       >
         Date
       </button>
       <button
-        class="math-button"
+        class="math-button flex-grow-1 flex-sm-grow-0"
         :class="{ active: typeSelected === 'math' }"
         @click="typeSelected = 'math'"
       >
@@ -52,15 +52,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.the-type-selector {
-  margin: 10px 0;
-}
-
-.container {
-  display: flex;
-  justify-content: space-around;
-}
-
 button {
   background: transparent;
   border: 2px solid transparent;

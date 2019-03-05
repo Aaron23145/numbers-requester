@@ -22,7 +22,6 @@ export default {
   ]),
   watch: {
     requestTypeSelected (newType) {
-      // this.$el.style.setProperty('--active-color', 'var(--main-blue)')
       switch (newType) {
         case 'trivia':
           this.$el.style.setProperty('--active-color', 'var(--main-dark-red)')

@@ -2,7 +2,7 @@
   <div class="input-date row">
     <select
       v-model="monthSelected"
-      class="col-3"
+      class="col-12 col-md-3"
     >
       <DefaultEmptyOption empty-option-text="Select Month" />
       <option
@@ -17,7 +17,7 @@
     <select
       v-if="monthSelected"
       v-model="daySelected"
-      class="col-3"
+      class="col-12 col-md-3 mt-2 mt-md-0"
     >
       <DefaultEmptyOption empty-option-text="Select Day" />
       <option
@@ -30,12 +30,12 @@
     </select>
     <div
       v-else
-      class="col-3"
+      class="d-none d-md-block col-3"
     />
 
     <button
       v-if="daySelected"
-      class="col-3"
+      class="col-12 col-md-3 mt-2 mt-md-0"
       @click="request"
     >
       Request
@@ -98,7 +98,7 @@ export default {
 
 select, button {
   display: block;
-  height: 100%;
+  // height: 100%;
 }
 
 select {
