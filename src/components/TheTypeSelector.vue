@@ -54,11 +54,18 @@ export default {
 <style lang="scss" scoped>
 button {
   background: transparent;
-  border: 2px solid transparent;
-  border-radius: 3px;
+  border-width: 0;
+  border-style: solid;
   padding: 10px 5%;
   transition: background .5s;
   outline: none;
+}
+
+@media (min-width: 576px) {
+  button {
+    border-radius: 3px;
+    border-width: 2px;
+  }
 }
 
 .trivia-button {
