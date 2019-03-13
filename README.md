@@ -10,6 +10,7 @@ This app does not work on https because it uses an http api to fetch the data (h
 ## Live
 
 You can see the app working in a live static http server there: http://numbers-requester.getforge.io/
+If it does not work, try it with the mirror: http://numbers-requester.co.nf/
 
 ## Compile source
 
